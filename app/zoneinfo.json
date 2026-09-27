@@ -1,0 +1,3702 @@
+{
+ "acrylia": {
+  "clip": 650.0,
+  "expansion": 3,
+  "fog": [
+   50,
+   50,
+   50
+  ],
+  "fogFar": 600.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Acrylia Caverns",
+  "outdoor": false,
+  "safe": [
+   -665.0,
+   20.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "airplane": {
+  "clip": 2000.0,
+  "expansion": 0,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "Plane of Sky",
+  "outdoor": true,
+  "safe": [
+   614.0,
+   1415.0,
+   -650.0
+  ],
+  "sky": 3
+ },
+ "akanon": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   30,
+   60,
+   30
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Ak'Anon",
+  "outdoor": true,
+  "safe": [
+   -35.0,
+   47.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "akheva": {
+  "clip": 1300.0,
+  "expansion": 3,
+  "fog": [
+   1,
+   1,
+   1
+  ],
+  "fogFar": 1300.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "Akheva Ruins",
+  "outdoor": false,
+  "safe": [
+   60.0,
+   -1395.0,
+   22.0
+  ],
+  "sky": 0
+ },
+ "arena": {
+  "clip": 1500.0,
+  "expansion": 0,
+  "fog": [
+   100,
+   100,
+   100
+  ],
+  "fogFar": 1500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Arena",
+  "outdoor": true,
+  "safe": [
+   -817.0,
+   -11.0,
+   11.0
+  ],
+  "sky": 1
+ },
+ "arena2": {
+  "clip": 2000.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "The Arena Two",
+  "outdoor": true,
+  "safe": [
+   460.9,
+   -41.4,
+   24.6
+  ],
+  "sky": 0
+ },
+ "aviak": {
+  "clip": 450.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 450.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Aviak Village",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "bazaar": {
+  "clip": 400.0,
+  "expansion": 3,
+  "fog": [
+   50,
+   50,
+   50
+  ],
+  "fogFar": 400.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "The Bazaar",
+  "outdoor": true,
+  "safe": [
+   140.0,
+   -821.0,
+   5.0
+  ],
+  "sky": 0
+ },
+ "befallen": {
+  "clip": 175.0,
+  "expansion": 0,
+  "fog": [
+   0,
+   0,
+   30
+  ],
+  "fogFar": 175.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Befallen",
+  "outdoor": false,
+  "safe": [
+   35.0,
+   -82.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "beholder": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   240,
+   180,
+   150
+  ],
+  "fogFar": 600.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Gorge of King Xorbb",
+  "outdoor": true,
+  "safe": [
+   -21.44,
+   -512.23,
+   45.13
+  ],
+  "sky": 1
+ },
+ "blackburrow": {
+  "clip": 700.0,
+  "expansion": 0,
+  "fog": [
+   50,
+   100,
+   90
+  ],
+  "fogFar": 700.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Blackburrow",
+  "outdoor": true,
+  "safe": [
+   39.0,
+   -159.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "bothunder": {
+  "clip": 400.0,
+  "expansion": 4,
+  "fog": [
+   30,
+   30,
+   30
+  ],
+  "fogFar": 400.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Bastion of Thunder",
+  "outdoor": true,
+  "safe": [
+   178.0,
+   207.0,
+   -1620.0
+  ],
+  "sky": 0
+ },
+ "burningwood": {
+  "clip": 1200.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 400.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "The Burning Wood",
+  "outdoor": true,
+  "safe": [
+   -821.0,
+   -4942.0,
+   204.0
+  ],
+  "sky": 0
+ },
+ "butcher": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   150,
+   170,
+   140
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Butcherblock Mountains",
+  "outdoor": true,
+  "safe": [
+   -700.0,
+   2550.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "cabeast": {
+  "clip": 300.0,
+  "expansion": 1,
+  "fog": [
+   150,
+   120,
+   80
+  ],
+  "fogFar": 300.0,
+  "fogNear": 40.0,
+  "heading": 0.0,
+  "name": "Cabilis East",
+  "outdoor": true,
+  "safe": [
+   -417.0,
+   1362.0,
+   8.0
+  ],
+  "sky": 0
+ },
+ "cabwest": {
+  "clip": 300.0,
+  "expansion": 1,
+  "fog": [
+   150,
+   120,
+   80
+  ],
+  "fogFar": 300.0,
+  "fogNear": 40.0,
+  "heading": 0.0,
+  "name": "Cabilis West",
+  "outdoor": true,
+  "safe": [
+   767.0,
+   -783.0,
+   8.0
+  ],
+  "sky": 0
+ },
+ "cauldron": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   100,
+   100,
+   140
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Dagnor's Cauldron",
+  "outdoor": true,
+  "safe": [
+   320.0,
+   2815.0,
+   473.0
+  ],
+  "sky": 1
+ },
+ "cazicthule": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   50,
+   80,
+   20
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Accursed Temple of CazicThule",
+  "outdoor": true,
+  "safe": [
+   -74.0,
+   71.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "charasis": {
+  "clip": 1400.0,
+  "expansion": 1,
+  "fog": [
+   160,
+   180,
+   200
+  ],
+  "fogFar": 400.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "The Howling Stones",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   0.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "chardok": {
+  "clip": 600.0,
+  "expansion": 1,
+  "fog": [
+   90,
+   53,
+   6
+  ],
+  "fogFar": 300.0,
+  "fogNear": 30.0,
+  "heading": 0.0,
+  "name": "Chardok",
+  "outdoor": false,
+  "safe": [
+   859.0,
+   119.0,
+   106.0
+  ],
+  "sky": 0
+ },
+ "citymist": {
+  "clip": 400.0,
+  "expansion": 1,
+  "fog": [
+   90,
+   110,
+   60
+  ],
+  "fogFar": 275.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "The City of Mist",
+  "outdoor": true,
+  "safe": [
+   -734.0,
+   28.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "clz": {
+  "clip": 450.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 450.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Loading",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "cobaltscar": {
+  "clip": 1800.0,
+  "expansion": 2,
+  "fog": [
+   180,
+   180,
+   180
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Cobaltscar",
+  "outdoor": true,
+  "safe": [
+   895.0,
+   -939.0,
+   318.0
+  ],
+  "sky": 0
+ },
+ "codecay": {
+  "clip": 300.0,
+  "expansion": 4,
+  "fog": [
+   25,
+   40,
+   5
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The Crypt of Decay",
+  "outdoor": false,
+  "safe": [
+   -170.0,
+   -65.0,
+   -93.0
+  ],
+  "sky": 0
+ },
+ "commons": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "West Commonlands",
+  "outdoor": true,
+  "safe": [
+   -1334.24,
+   209.57,
+   -51.47
+  ],
+  "sky": 1
+ },
+ "crushbone": {
+  "clip": 400.0,
+  "expansion": 0,
+  "fog": [
+   90,
+   90,
+   190
+  ],
+  "fogFar": 400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Crushbone",
+  "outdoor": true,
+  "safe": [
+   158.0,
+   -644.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "crystal": {
+  "clip": 800.0,
+  "expansion": 2,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 0.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "Crystal Caverns",
+  "outdoor": false,
+  "safe": [
+   303.0,
+   487.0,
+   -74.0
+  ],
+  "sky": 0
+ },
+ "cshome": {
+  "clip": 550.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 550.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Sunset Home",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   100.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "dalnir": {
+  "clip": 600.0,
+  "expansion": 1,
+  "fog": [
+   20,
+   10,
+   25
+  ],
+  "fogFar": 210.0,
+  "fogNear": 30.0,
+  "heading": 0.0,
+  "name": "The Crypt of Dalnir",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   0.0,
+   6.0
+  ],
+  "sky": 0
+ },
+ "dawnshroud": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Dawnshroud Peaks",
+  "outdoor": true,
+  "safe": [
+   2085.0,
+   0.0,
+   89.0
+  ],
+  "sky": 0
+ },
+ "dreadlands": {
+  "clip": 1800.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "The Dreadlands",
+  "outdoor": true,
+  "safe": [
+   9565.0,
+   2806.0,
+   1050.0
+  ],
+  "sky": 4
+ },
+ "droga": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   0,
+   15,
+   0
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Mines of Droga",
+  "outdoor": false,
+  "safe": [
+   290.0,
+   1375.0,
+   6.0
+  ],
+  "sky": 0
+ },
+ "eastkarana": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Eastern Plains of Karana",
+  "outdoor": true,
+  "safe": [
+   865.0,
+   15.0,
+   -33.0
+  ],
+  "sky": 1
+ },
+ "eastwastes": {
+  "clip": 1800.0,
+  "expansion": 2,
+  "fog": [
+   200,
+   200,
+   200
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Eastern Wastes",
+  "outdoor": true,
+  "safe": [
+   -4296.0,
+   -5049.0,
+   147.0
+  ],
+  "sky": 4
+ },
+ "echo": {
+  "clip": 400.0,
+  "expansion": 3,
+  "fog": [
+   10,
+   10,
+   10
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Echo Caverns",
+  "outdoor": false,
+  "safe": [
+   -800.0,
+   840.0,
+   -25.0
+  ],
+  "sky": 0
+ },
+ "ecommons": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "East Commonlands",
+  "outdoor": true,
+  "safe": [
+   -1485.0,
+   9.2,
+   -51.0
+  ],
+  "sky": 1
+ },
+ "emeraldjungle": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   200,
+   235,
+   210
+  ],
+  "fogFar": 200.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "The Emerald Jungle",
+  "outdoor": true,
+  "safe": [
+   4648.0,
+   -1223.0,
+   2.0
+  ],
+  "sky": 0
+ },
+ "erudnext": {
+  "clip": 550.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 550.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Erudin",
+  "outdoor": true,
+  "safe": [
+   -338.0,
+   75.0,
+   20.0
+  ],
+  "sky": 1
+ },
+ "erudnint": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 0.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "Erudin Palace",
+  "outdoor": true,
+  "safe": [
+   808.0,
+   712.0,
+   21.0
+  ],
+  "sky": 0
+ },
+ "erudsxing": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 1400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Erud's Crossing",
+  "outdoor": true,
+  "safe": [
+   795.0,
+   -1767.0,
+   11.0
+  ],
+  "sky": 1
+ },
+ "erudsxing2": {
+  "clip": 450.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 450.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Marauders Mire",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "everfrost": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Everfrost Peaks",
+  "outdoor": true,
+  "safe": [
+   629.0,
+   3139.0,
+   -60.0
+  ],
+  "sky": 0
+ },
+ "fearplane": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   255,
+   50,
+   10
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Plane of Fear",
+  "outdoor": true,
+  "safe": [
+   1282.0,
+   -1139.0,
+   5.0
+  ],
+  "sky": 5
+ },
+ "feerrott": {
+  "clip": 200.0,
+  "expansion": 0,
+  "fog": [
+   60,
+   90,
+   30
+  ],
+  "fogFar": 175.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Feerrott",
+  "outdoor": true,
+  "safe": [
+   905.0,
+   1051.0,
+   25.0
+  ],
+  "sky": 0
+ },
+ "felwithea": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   100,
+   130,
+   100
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Northern Felwithe",
+  "outdoor": true,
+  "safe": [
+   94.0,
+   -25.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "felwitheb": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   100,
+   130,
+   100
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Southern Felwithe",
+  "outdoor": true,
+  "safe": [
+   -790.0,
+   320.0,
+   -10.0
+  ],
+  "sky": 1
+ },
+ "fieldofbone": {
+  "clip": 1400.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Field of Bone",
+  "outdoor": true,
+  "safe": [
+   1617.0,
+   -1684.0,
+   -50.0
+  ],
+  "sky": 1
+ },
+ "firiona": {
+  "clip": 1800.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Firiona Vie",
+  "outdoor": true,
+  "safe": [
+   1440.0,
+   -2392.0,
+   1.0
+  ],
+  "sky": 4
+ },
+ "freporte": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   230,
+   200,
+   200
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "East Freeport",
+  "outdoor": true,
+  "safe": [
+   -648.0,
+   -1097.0,
+   -52.2
+  ],
+  "sky": 1
+ },
+ "freportn": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   230,
+   200,
+   200
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "North Freeport",
+  "outdoor": true,
+  "safe": [
+   211.0,
+   -296.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "freportw": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   230,
+   200,
+   200
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "West Freeport",
+  "outdoor": true,
+  "safe": [
+   181.0,
+   335.0,
+   -24.0
+  ],
+  "sky": 1
+ },
+ "frontiermtns": {
+  "clip": 1800.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Frontier Mountains",
+  "outdoor": true,
+  "safe": [
+   -4262.0,
+   -633.0,
+   116.0
+  ],
+  "sky": 4
+ },
+ "frozenshadow": {
+  "clip": 350.0,
+  "expansion": 2,
+  "fog": [
+   25,
+   25,
+   25
+  ],
+  "fogFar": 350.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Tower of Frozen Shadow",
+  "outdoor": false,
+  "safe": [
+   200.0,
+   120.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "fungusgrove": {
+  "clip": 600.0,
+  "expansion": 3,
+  "fog": [
+   25,
+   50,
+   50
+  ],
+  "fogFar": 600.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The Fungus Grove",
+  "outdoor": false,
+  "safe": [
+   -1005.0,
+   -2140.0,
+   -308.0
+  ],
+  "sky": 0
+ },
+ "gfaydark": {
+  "clip": 325.0,
+  "expansion": 0,
+  "fog": [
+   230,
+   255,
+   200
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Greater Faydark",
+  "outdoor": true,
+  "safe": [
+   10.0,
+   -20.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "greatdivide": {
+  "clip": 1800.0,
+  "expansion": 2,
+  "fog": [
+   160,
+   160,
+   172
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "The Great Divide",
+  "outdoor": true,
+  "safe": [
+   -965.0,
+   -7720.0,
+   -557.0
+  ],
+  "sky": 0
+ },
+ "griegsend": {
+  "clip": 1800.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Grieg's End",
+  "outdoor": true,
+  "safe": [
+   3461.0,
+   -19.0,
+   -5.0
+  ],
+  "sky": 8
+ },
+ "grimling": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Grimling Forest",
+  "outdoor": true,
+  "safe": [
+   -1020.0,
+   -950.0,
+   22.0
+  ],
+  "sky": 0
+ },
+ "grobb": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   170,
+   160,
+   90
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Grobb",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   -100.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "growthplane": {
+  "clip": 1200.0,
+  "expansion": 2,
+  "fog": [
+   0,
+   50,
+   100
+  ],
+  "fogFar": 1200.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "Plane of Growth",
+  "outdoor": true,
+  "safe": [
+   3016.0,
+   -2522.0,
+   -19.0
+  ],
+  "sky": 0
+ },
+ "gukbottom": {
+  "clip": 140.0,
+  "expansion": 0,
+  "fog": [
+   50,
+   45,
+   20
+  ],
+  "fogFar": 140.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Ruins of Old Guk",
+  "outdoor": false,
+  "safe": [
+   -217.0,
+   1197.0,
+   -78.0
+  ],
+  "sky": 0
+ },
+ "guktop": {
+  "clip": 140.0,
+  "expansion": 0,
+  "fog": [
+   40,
+   45,
+   20
+  ],
+  "fogFar": 140.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Guk",
+  "outdoor": false,
+  "safe": [
+   7.0,
+   -36.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "halas": {
+  "clip": 350.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Halas",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "hateplane": {
+  "clip": 200.0,
+  "expansion": 0,
+  "fog": [
+   128,
+   128,
+   128
+  ],
+  "fogFar": 200.0,
+  "fogNear": 30.0,
+  "heading": 0.0,
+  "name": "Plane of Hate",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "highkeep": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 0.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "High Keep",
+  "outdoor": true,
+  "safe": [
+   88.0,
+   -16.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "highpass": {
+  "clip": 400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   200
+  ],
+  "fogFar": 400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Highpass Hold",
+  "outdoor": true,
+  "safe": [
+   -104.0,
+   -14.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "hohonora": {
+  "clip": 2000.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Halls of Honor",
+  "outdoor": true,
+  "safe": [
+   -2678.0,
+   -323.0,
+   3.0
+  ],
+  "sky": 12
+ },
+ "hohonorb": {
+  "clip": 800.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Temple of Marr",
+  "outdoor": true,
+  "safe": [
+   975.0,
+   2.0,
+   396.0
+  ],
+  "sky": 12
+ },
+ "hole": {
+  "clip": 600.0,
+  "expansion": 1,
+  "fog": [
+   10,
+   10,
+   10
+  ],
+  "fogFar": 500.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "The Hole",
+  "outdoor": false,
+  "safe": [
+   -1050.0,
+   640.0,
+   -80.0
+  ],
+  "sky": 0
+ },
+ "hollowshade": {
+  "clip": 2000.0,
+  "expansion": 3,
+  "fog": [
+   100,
+   110,
+   40
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Hollowshade Moor",
+  "outdoor": true,
+  "safe": [
+   2420.0,
+   1241.0,
+   40.0
+  ],
+  "sky": 7
+ },
+ "iceclad": {
+  "clip": 1800.0,
+  "expansion": 2,
+  "fog": [
+   200,
+   200,
+   200
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Iceclad Ocean",
+  "outdoor": true,
+  "safe": [
+   340.0,
+   5330.0,
+   -17.0
+  ],
+  "sky": 4
+ },
+ "innothule": {
+  "clip": 550.0,
+  "expansion": 0,
+  "fog": [
+   170,
+   160,
+   90
+  ],
+  "fogFar": 500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Innothule Swamp",
+  "outdoor": true,
+  "safe": [
+   -588.0,
+   -2192.0,
+   -25.0
+  ],
+  "sky": 0
+ },
+ "jaggedpine": {
+  "clip": 2000.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "Jaggedpine Forest",
+  "outdoor": true,
+  "safe": [
+   1800.0,
+   1319.0,
+   -13.0
+  ],
+  "sky": 1
+ },
+ "kael": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   10,
+   10,
+   50
+  ],
+  "fogFar": 500.0,
+  "fogNear": 20.0,
+  "heading": 0.0,
+  "name": "Kael Drakkel",
+  "outdoor": false,
+  "safe": [
+   -633.0,
+   -47.0,
+   128.0
+  ],
+  "sky": 0
+ },
+ "kaesora": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   0,
+   10,
+   0
+  ],
+  "fogFar": 200.0,
+  "fogNear": 20.0,
+  "heading": 0.0,
+  "name": "Kaesora",
+  "outdoor": false,
+  "safe": [
+   40.0,
+   370.0,
+   102.0
+  ],
+  "sky": 0
+ },
+ "kaladima": {
+  "clip": 175.0,
+  "expansion": 0,
+  "fog": [
+   70,
+   50,
+   20
+  ],
+  "fogFar": 175.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "South Kaladim",
+  "outdoor": false,
+  "safe": [
+   -2.0,
+   -18.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "kaladimb": {
+  "clip": 175.0,
+  "expansion": 0,
+  "fog": [
+   70,
+   50,
+   20
+  ],
+  "fogFar": 175.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "North Kaladim",
+  "outdoor": false,
+  "safe": [
+   -267.0,
+   414.0,
+   3.75
+  ],
+  "sky": 0
+ },
+ "karnor": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   50,
+   20,
+   20
+  ],
+  "fogFar": 350.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Karnor's Castle",
+  "outdoor": true,
+  "safe": [
+   302.0,
+   18.0,
+   6.0
+  ],
+  "sky": 0
+ },
+ "katta": {
+  "clip": 800.0,
+  "expansion": 3,
+  "fog": [
+   100,
+   40,
+   40
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Katta Castellum",
+  "outdoor": true,
+  "safe": [
+   -545.0,
+   645.0,
+   1.0
+  ],
+  "sky": 7
+ },
+ "kedge": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 0.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "Kedge Keep",
+  "outdoor": false,
+  "safe": [
+   14.0,
+   100.0,
+   302.0
+  ],
+  "sky": 0
+ },
+ "kerraridge": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   220,
+   220,
+   200
+  ],
+  "fogFar": 600.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Kerra Isle",
+  "outdoor": true,
+  "safe": [
+   -859.97,
+   474.96,
+   23.75
+  ],
+  "sky": 1
+ },
+ "kithicor": {
+  "clip": 250.0,
+  "expansion": 0,
+  "fog": [
+   120,
+   140,
+   100
+  ],
+  "fogFar": 200.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Kithicor Forest",
+  "outdoor": true,
+  "safe": [
+   3828.0,
+   1889.0,
+   459.0
+  ],
+  "sky": 0
+ },
+ "kurn": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   50,
+   50,
+   20
+  ],
+  "fogFar": 200.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Kurn's Tower",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   0.0,
+   7.0
+  ],
+  "sky": 0
+ },
+ "lakeofillomen": {
+  "clip": 2000.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 1000.0,
+  "heading": 0.0,
+  "name": "Lake of Ill Omen",
+  "outdoor": true,
+  "safe": [
+   -5383.0,
+   5747.0,
+   70.0
+  ],
+  "sky": 1
+ },
+ "lakerathe": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Lake Rathetear",
+  "outdoor": true,
+  "safe": [
+   1213.0,
+   4183.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "lavastorm": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   255,
+   50,
+   10
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Lavastorm Mountains",
+  "outdoor": true,
+  "safe": [
+   154.0,
+   -1833.0,
+   -15.0
+  ],
+  "sky": 1
+ },
+ "letalis": {
+  "clip": 700.0,
+  "expansion": 3,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 700.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Mons Letalis",
+  "outdoor": true,
+  "safe": [
+   -623.0,
+   -1249.0,
+   -29.0
+  ],
+  "sky": 6
+ },
+ "lfaydark": {
+  "clip": 325.0,
+  "expansion": 0,
+  "fog": [
+   230,
+   255,
+   200
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Lesser Faydark",
+  "outdoor": true,
+  "safe": [
+   -1770.0,
+   -108.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "load": {
+  "clip": 2000.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "Loading Zone",
+  "outdoor": true,
+  "safe": [
+   -316.0,
+   5.0,
+   8.2
+  ],
+  "sky": 0
+ },
+ "load2": {
+  "clip": 2000.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "New Loading Zone",
+  "outdoor": true,
+  "safe": [
+   -260.0,
+   -4.0,
+   -724.0
+  ],
+  "sky": 0
+ },
+ "maiden": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Maiden's Eye",
+  "outdoor": true,
+  "safe": [
+   1905.0,
+   940.0,
+   -150.0
+  ],
+  "sky": 6
+ },
+ "mischiefplane": {
+  "clip": 800.0,
+  "expansion": 2,
+  "fog": [
+   210,
+   235,
+   210
+  ],
+  "fogFar": 600.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "Plane of Mischief",
+  "outdoor": true,
+  "safe": [
+   -395.0,
+   -1410.0,
+   115.0
+  ],
+  "sky": 0
+ },
+ "mistmoore": {
+  "clip": 250.0,
+  "expansion": 0,
+  "fog": [
+   60,
+   30,
+   90
+  ],
+  "fogFar": 1850.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Castle of Mistmoore",
+  "outdoor": true,
+  "safe": [
+   120.0,
+   -330.0,
+   -178.0
+  ],
+  "sky": 0
+ },
+ "misty": {
+  "clip": 550.0,
+  "expansion": 0,
+  "fog": [
+   100,
+   120,
+   50
+  ],
+  "fogFar": 500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Misty Thicket",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   2.43
+  ],
+  "sky": 0
+ },
+ "mseru": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   200,
+   230,
+   255
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Marus Seru",
+  "outdoor": true,
+  "safe": [
+   -1668.0,
+   540.0,
+   -6.0
+  ],
+  "sky": 6
+ },
+ "najena": {
+  "clip": 110.0,
+  "expansion": 0,
+  "fog": [
+   20,
+   0,
+   40
+  ],
+  "fogFar": 110.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Najena",
+  "outdoor": false,
+  "safe": [
+   858.0,
+   -76.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "necropolis": {
+  "clip": 2000.0,
+  "expansion": 2,
+  "fog": [
+   35,
+   50,
+   35
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Dragon Necropolis",
+  "outdoor": false,
+  "safe": [
+   2000.0,
+   -100.0,
+   5.0
+  ],
+  "sky": 0
+ },
+ "nektropos": {
+  "clip": 450.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 450.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Nektropos",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "nektulos": {
+  "clip": 275.0,
+  "expansion": 0,
+  "fog": [
+   80,
+   90,
+   70
+  ],
+  "fogFar": 250.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Nektulos Forest",
+  "outdoor": true,
+  "safe": [
+   -279.0,
+   -1201.0,
+   -5.0
+  ],
+  "sky": 0
+ },
+ "neriaka": {
+  "clip": 250.0,
+  "expansion": 0,
+  "fog": [
+   10,
+   0,
+   60
+  ],
+  "fogFar": 250.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Neriak - Foreign Quarter",
+  "outdoor": false,
+  "safe": [
+   157.0,
+   -3.0,
+   31.0
+  ],
+  "sky": 0
+ },
+ "neriakb": {
+  "clip": 250.0,
+  "expansion": 0,
+  "fog": [
+   10,
+   0,
+   60
+  ],
+  "fogFar": 250.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Neriak - Commons",
+  "outdoor": false,
+  "safe": [
+   -500.0,
+   3.0,
+   -10.0
+  ],
+  "sky": 0
+ },
+ "neriakc": {
+  "clip": 250.0,
+  "expansion": 0,
+  "fog": [
+   10,
+   0,
+   60
+  ],
+  "fogFar": 250.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Neriak - 3rd Gate",
+  "outdoor": false,
+  "safe": [
+   -969.0,
+   892.0,
+   -52.0
+  ],
+  "sky": 0
+ },
+ "neriakd": {
+  "clip": 450.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 450.0,
+  "fogNear": 450.0,
+  "heading": 0.0,
+  "name": "Neriak Palace",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "netherbian": {
+  "clip": 700.0,
+  "expansion": 3,
+  "fog": [
+   10,
+   10,
+   10
+  ],
+  "fogFar": 700.0,
+  "fogNear": 1.0,
+  "heading": 0.0,
+  "name": "Netherbian Lair",
+  "outdoor": false,
+  "safe": [
+   14.0,
+   1787.0,
+   -62.0
+  ],
+  "sky": 0
+ },
+ "nexus": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 300.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Nexus",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   -28.0
+  ],
+  "sky": 0
+ },
+ "nightmareb": {
+  "clip": 1200.0,
+  "expansion": 4,
+  "fog": [
+   0,
+   0,
+   20
+  ],
+  "fogFar": 1200.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "The Lair of Terris Thule",
+  "outdoor": true,
+  "safe": [
+   1608.0,
+   30.0,
+   -327.0
+  ],
+  "sky": 14
+ },
+ "northkarana": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Northern Plains of Karana",
+  "outdoor": true,
+  "safe": [
+   -382.0,
+   -284.0,
+   -8.0
+  ],
+  "sky": 1
+ },
+ "nro": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   250,
+   250,
+   180
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Northern Desert of Ro",
+  "outdoor": true,
+  "safe": [
+   299.12,
+   3537.9,
+   -24.5
+  ],
+  "sky": 2
+ },
+ "nurga": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   0,
+   15,
+   0
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Mines of Nurga",
+  "outdoor": false,
+  "safe": [
+   -1762.0,
+   -2200.0,
+   6.0
+  ],
+  "sky": 0
+ },
+ "oasis": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   250,
+   250,
+   180
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Oasis of Marr",
+  "outdoor": true,
+  "safe": [
+   903.98,
+   490.03,
+   6.4
+  ],
+  "sky": 2
+ },
+ "oggok": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   130,
+   140,
+   80
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Oggok",
+  "outdoor": true,
+  "safe": [
+   -99.0,
+   -345.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "oot": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Ocean of Tears",
+  "outdoor": true,
+  "safe": [
+   -9200.0,
+   390.0,
+   6.0
+  ],
+  "sky": 1
+ },
+ "overthere": {
+  "clip": 1800.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "The Overthere",
+  "outdoor": true,
+  "safe": [
+   1450.0,
+   -3500.0,
+   309.0
+  ],
+  "sky": 1
+ },
+ "paineel": {
+  "clip": 1000.0,
+  "expansion": 0,
+  "fog": [
+   150,
+   150,
+   150
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Paineel",
+  "outdoor": true,
+  "safe": [
+   200.0,
+   800.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "paludal": {
+  "clip": 700.0,
+  "expansion": 3,
+  "fog": [
+   10,
+   10,
+   10
+  ],
+  "fogFar": 700.0,
+  "fogNear": 1.0,
+  "heading": 0.0,
+  "name": "The Paludal Caverns",
+  "outdoor": false,
+  "safe": [
+   -241.0,
+   -3721.0,
+   195.0
+  ],
+  "sky": 0
+ },
+ "paw": {
+  "clip": 180.0,
+  "expansion": 0,
+  "fog": [
+   30,
+   25,
+   10
+  ],
+  "fogFar": 180.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Lair of the Splitpaw",
+  "outdoor": false,
+  "safe": [
+   63.0,
+   -122.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "permafrost": {
+  "clip": 180.0,
+  "expansion": 0,
+  "fog": [
+   25,
+   35,
+   45
+  ],
+  "fogFar": 180.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Permafrost Caverns",
+  "outdoor": false,
+  "safe": [
+   61.0,
+   -121.0,
+   2.0
+  ],
+  "sky": 0
+ },
+ "poair": {
+  "clip": 300.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 300.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Air",
+  "outdoor": true,
+  "safe": [
+   532.0,
+   884.0,
+   -90.0
+  ],
+  "sky": 17
+ },
+ "podisease": {
+  "clip": 800.0,
+  "expansion": 4,
+  "fog": [
+   130,
+   100,
+   20
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Disease",
+  "outdoor": true,
+  "safe": [
+   -1750.0,
+   -1245.0,
+   -56.0
+  ],
+  "sky": 13
+ },
+ "poeartha": {
+  "clip": 600.0,
+  "expansion": 4,
+  "fog": [
+   140,
+   126,
+   99
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Earth",
+  "outdoor": true,
+  "safe": [
+   -1150.0,
+   200.0,
+   71.0
+  ],
+  "sky": 13
+ },
+ "poearthb": {
+  "clip": 600.0,
+  "expansion": 4,
+  "fog": [
+   140,
+   126,
+   99
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Earth",
+  "outdoor": true,
+  "safe": [
+   -762.0,
+   328.0,
+   -56.0
+  ],
+  "sky": 13
+ },
+ "pofire": {
+  "clip": 800.0,
+  "expansion": 4,
+  "fog": [
+   1,
+   1,
+   1
+  ],
+  "fogFar": 800.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Plane of Fire",
+  "outdoor": true,
+  "safe": [
+   -1387.0,
+   1210.0,
+   -182.0
+  ],
+  "sky": 11
+ },
+ "poinnovation": {
+  "clip": 600.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   200
+  ],
+  "fogFar": 600.0,
+  "fogNear": 210.0,
+  "heading": 0.0,
+  "name": "Plane of Innovation",
+  "outdoor": true,
+  "safe": [
+   263.0,
+   516.0,
+   -53.0
+  ],
+  "sky": 14
+ },
+ "pojustice": {
+  "clip": 900.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Plane of Justice",
+  "outdoor": true,
+  "safe": [
+   58.0,
+   -61.0,
+   5.0
+  ],
+  "sky": 12
+ },
+ "poknowledge": {
+  "clip": 1400.0,
+  "expansion": 4,
+  "fog": [
+   50,
+   50,
+   155
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Plane of Knowledge",
+  "outdoor": true,
+  "safe": [
+   -285.0,
+   -148.0,
+   -159.0
+  ],
+  "sky": 2
+ },
+ "ponightmare": {
+  "clip": 600.0,
+  "expansion": 4,
+  "fog": [
+   0,
+   0,
+   20
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Nightmares",
+  "outdoor": true,
+  "safe": [
+   1668.0,
+   282.0,
+   212.0
+  ],
+  "sky": 15
+ },
+ "postorms": {
+  "clip": 800.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   255,
+   255
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Storms",
+  "outdoor": true,
+  "safe": [
+   -1795.0,
+   -2059.0,
+   -471.0
+  ],
+  "sky": 16
+ },
+ "potactics": {
+  "clip": 400.0,
+  "expansion": 4,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 400.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Drunder, the Fortress of Zek",
+  "outdoor": false,
+  "safe": [
+   -210.0,
+   10.0,
+   -35.0
+  ],
+  "sky": 0
+ },
+ "potimea": {
+  "clip": 1300.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 1300.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Time",
+  "outdoor": true,
+  "safe": [
+   -37.0,
+   -110.0,
+   8.0
+  ],
+  "sky": 1
+ },
+ "potimeb": {
+  "clip": 1000.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Plane of Time",
+  "outdoor": true,
+  "safe": [
+   851.0,
+   -141.0,
+   396.0
+  ],
+  "sky": 1
+ },
+ "potorment": {
+  "clip": 900.0,
+  "expansion": 4,
+  "fog": [
+   70,
+   5,
+   5
+  ],
+  "fogFar": 900.0,
+  "fogNear": 300.0,
+  "heading": 0.0,
+  "name": "Torment, the Plane of Pain",
+  "outdoor": true,
+  "safe": [
+   -341.0,
+   1706.0,
+   -491.0
+  ],
+  "sky": 0
+ },
+ "potranquility": {
+  "clip": 1400.0,
+  "expansion": 4,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Plane of Tranquility",
+  "outdoor": true,
+  "safe": [
+   -1507.0,
+   701.0,
+   -878.0
+  ],
+  "sky": 17
+ },
+ "povalor": {
+  "clip": 800.0,
+  "expansion": 4,
+  "fog": [
+   100,
+   50,
+   100
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Plane of Valor",
+  "outdoor": true,
+  "safe": [
+   190.0,
+   -1668.0,
+   65.0
+  ],
+  "sky": 12
+ },
+ "powar": {
+  "clip": 2000.0,
+  "expansion": 4,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "Plane of War",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "powater": {
+  "clip": 600.0,
+  "expansion": 4,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 0.0,
+  "fogNear": 0.0,
+  "heading": 0.0,
+  "name": "Plane of Water",
+  "outdoor": false,
+  "safe": [
+   -165.0,
+   -1250.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "qcat": {
+  "clip": 125.0,
+  "expansion": 0,
+  "fog": [
+   30,
+   50,
+   10
+  ],
+  "fogFar": 125.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Qeynos Aqueduct System",
+  "outdoor": false,
+  "safe": [
+   80.0,
+   860.0,
+   -38.0
+  ],
+  "sky": 0
+ },
+ "qey2hh1": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Western Plains of Karana",
+  "outdoor": true,
+  "safe": [
+   -531.0,
+   15.0,
+   -3.0
+  ],
+  "sky": 1
+ },
+ "qeynos": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   210
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "South Qeynos",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   10.0,
+   5.0
+  ],
+  "sky": 1
+ },
+ "qeynos2": {
+  "clip": 1000.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "North Qeynos",
+  "outdoor": true,
+  "safe": [
+   -74.0,
+   428.0,
+   3.0
+  ],
+  "sky": 1
+ },
+ "qeytoqrg": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Qeynos Hills",
+  "outdoor": true,
+  "safe": [
+   83.0,
+   508.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "qrg": {
+  "clip": 450.0,
+  "expansion": 0,
+  "fog": [
+   180,
+   175,
+   183
+  ],
+  "fogFar": 450.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Surefall Glade",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   2.0
+  ],
+  "sky": 0
+ },
+ "rathemtn": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Rathe Mountains",
+  "outdoor": true,
+  "safe": [
+   1831.0,
+   3825.0,
+   28.0
+  ],
+  "sky": 1
+ },
+ "rivervale": {
+  "clip": 400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   210,
+   200
+  ],
+  "fogFar": 400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Rivervale",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   4.0
+  ],
+  "sky": 1
+ },
+ "runnyeye": {
+  "clip": 600.0,
+  "expansion": 0,
+  "fog": [
+   75,
+   150,
+   25
+  ],
+  "fogFar": 600.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Liberated Citadel of Runnyeye",
+  "outdoor": false,
+  "safe": [
+   201.0,
+   90.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "scarlet": {
+  "clip": 700.0,
+  "expansion": 3,
+  "fog": [
+   220,
+   20,
+   20
+  ],
+  "fogFar": 700.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Scarlet Desert",
+  "outdoor": true,
+  "safe": [
+   -1678.0,
+   -1054.0,
+   -98.0
+  ],
+  "sky": 0
+ },
+ "sebilis": {
+  "clip": 600.0,
+  "expansion": 1,
+  "fog": [
+   20,
+   10,
+   60
+  ],
+  "fogFar": 400.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "Ruins of Sebilis",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   250.0,
+   44.0
+  ],
+  "sky": 0
+ },
+ "shadeweaver": {
+  "clip": 1500.0,
+  "expansion": 3,
+  "fog": [
+   11,
+   76,
+   122
+  ],
+  "fogFar": 1500.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Shadeweaver's Thicket",
+  "outdoor": true,
+  "safe": [
+   -3570.0,
+   -2122.0,
+   -93.0
+  ],
+  "sky": 7
+ },
+ "shadowhaven": {
+  "clip": 650.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Shadow Haven",
+  "outdoor": false,
+  "safe": [
+   190.0,
+   -982.0,
+   -28.0
+  ],
+  "sky": 0
+ },
+ "sharvahl": {
+  "clip": 600.0,
+  "expansion": 3,
+  "fog": [
+   5,
+   5,
+   5
+  ],
+  "fogFar": 600.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The City of Shar Vahl",
+  "outdoor": true,
+  "safe": [
+   85.0,
+   -1135.0,
+   -188.0
+  ],
+  "sky": 0
+ },
+ "sirens": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   30,
+   100,
+   130
+  ],
+  "fogFar": 500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Siren's Grotto",
+  "outdoor": false,
+  "safe": [
+   -33.0,
+   196.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "skyfire": {
+  "clip": 1800.0,
+  "expansion": 1,
+  "fog": [
+   235,
+   200,
+   200
+  ],
+  "fogFar": 600.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Skyfire Mountains",
+  "outdoor": true,
+  "safe": [
+   -4286.0,
+   -1140.0,
+   38.0
+  ],
+  "sky": 2
+ },
+ "skyshrine": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   25,
+   35,
+   45
+  ],
+  "fogFar": 600.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Skyshrine",
+  "outdoor": true,
+  "safe": [
+   -730.0,
+   -210.0,
+   0.0
+  ],
+  "sky": 1
+ },
+ "sleeper": {
+  "clip": 1000.0,
+  "expansion": 2,
+  "fog": [
+   80,
+   80,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Sleeper's Tomb",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   0.0,
+   5.0
+  ],
+  "sky": 0
+ },
+ "soldunga": {
+  "clip": 100.0,
+  "expansion": 0,
+  "fog": [
+   180,
+   30,
+   30
+  ],
+  "fogFar": 100.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Solusek's Eye",
+  "outdoor": false,
+  "safe": [
+   -486.0,
+   -476.0,
+   73.0
+  ],
+  "sky": 0
+ },
+ "soldungb": {
+  "clip": 350.0,
+  "expansion": 0,
+  "fog": [
+   180,
+   30,
+   30
+  ],
+  "fogFar": 350.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Nagafen's Lair",
+  "outdoor": false,
+  "safe": [
+   -263.0,
+   -424.0,
+   -108.0
+  ],
+  "sky": 1
+ },
+ "solrotower": {
+  "clip": 1400.0,
+  "expansion": 4,
+  "fog": [
+   51,
+   0,
+   0
+  ],
+  "fogFar": 1400.0,
+  "fogNear": 600.0,
+  "heading": 0.0,
+  "name": "Tower of Solusek Ro",
+  "outdoor": false,
+  "safe": [
+   -1.0,
+   -2915.0,
+   -766.0
+  ],
+  "sky": 0
+ },
+ "soltemple": {
+  "clip": 1500.0,
+  "expansion": 0,
+  "fog": [
+   180,
+   5,
+   5
+  ],
+  "fogFar": 1500.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "Temple of Solusek Ro",
+  "outdoor": false,
+  "safe": [
+   36.0,
+   262.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "southkarana": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Southern Plains of Karana",
+  "outdoor": true,
+  "safe": [
+   1294.0,
+   2348.0,
+   -6.0
+  ],
+  "sky": 1
+ },
+ "sro": {
+  "clip": 1400.0,
+  "expansion": 0,
+  "fog": [
+   250,
+   250,
+   180
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Southern Desert of Ro",
+  "outdoor": true,
+  "safe": [
+   286.0,
+   1265.0,
+   79.0
+  ],
+  "sky": 2
+ },
+ "sseru": {
+  "clip": 800.0,
+  "expansion": 3,
+  "fog": [
+   72,
+   72,
+   72
+  ],
+  "fogFar": 800.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Sanctus Seru",
+  "outdoor": true,
+  "safe": [
+   -232.0,
+   1166.0,
+   59.0
+  ],
+  "sky": 9
+ },
+ "ssratemple": {
+  "clip": 400.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Ssraeshza Temple",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   0.0,
+   4.0
+  ],
+  "sky": 0
+ },
+ "steamfont": {
+  "clip": 800.0,
+  "expansion": 0,
+  "fog": [
+   200,
+   200,
+   220
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Steamfont Mountains",
+  "outdoor": true,
+  "safe": [
+   -272.86,
+   159.86,
+   -21.4
+  ],
+  "sky": 1
+ },
+ "stonebrunt": {
+  "clip": 1400.0,
+  "expansion": 2,
+  "fog": [
+   235,
+   235,
+   235
+  ],
+  "fogFar": 1400.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Stonebrunt Mountains",
+  "outdoor": true,
+  "safe": [
+   -1643.0,
+   -3428.0,
+   -7.0
+  ],
+  "sky": 0
+ },
+ "swampofnohope": {
+  "clip": 1000.0,
+  "expansion": 1,
+  "fog": [
+   210,
+   200,
+   210
+  ],
+  "fogFar": 400.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "Swamp of No Hope",
+  "outdoor": true,
+  "safe": [
+   2945.0,
+   2761.0,
+   6.0
+  ],
+  "sky": 0
+ },
+ "templeveeshan": {
+  "clip": 1200.0,
+  "expansion": 2,
+  "fog": [
+   60,
+   10,
+   10
+  ],
+  "fogFar": 300.0,
+  "fogNear": 30.0,
+  "heading": 0.0,
+  "name": "Temple of Veeshan",
+  "outdoor": false,
+  "safe": [
+   -499.0,
+   -2086.0,
+   -36.0
+  ],
+  "sky": 0
+ },
+ "tenebrous": {
+  "clip": 800.0,
+  "expansion": 3,
+  "fog": [
+   45,
+   4,
+   65
+  ],
+  "fogFar": 800.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Tenebrous Mountains",
+  "outdoor": true,
+  "safe": [
+   1810.0,
+   51.0,
+   -36.0
+  ],
+  "sky": 7
+ },
+ "thedeep": {
+  "clip": 1400.0,
+  "expansion": 3,
+  "fog": [
+   50,
+   50,
+   50
+  ],
+  "fogFar": 1400.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The Deep",
+  "outdoor": false,
+  "safe": [
+   -700.0,
+   -398.0,
+   -60.0
+  ],
+  "sky": 0
+ },
+ "thegrey": {
+  "clip": 2000.0,
+  "expansion": 3,
+  "fog": [
+   24,
+   24,
+   24
+  ],
+  "fogFar": 700.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The Grey",
+  "outdoor": true,
+  "safe": [
+   349.0,
+   -1994.0,
+   -26.0
+  ],
+  "sky": 9
+ },
+ "thurgadina": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   25,
+   25,
+   25
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The City of Thurgadin",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   -1222.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "thurgadinb": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   25,
+   25,
+   25
+  ],
+  "fogFar": 300.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Icewell Keep",
+  "outdoor": false,
+  "safe": [
+   0.0,
+   250.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "timorous": {
+  "clip": 1400.0,
+  "expansion": 1,
+  "fog": [
+   225,
+   225,
+   230
+  ],
+  "fogFar": 700.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Timorous Deep",
+  "outdoor": true,
+  "safe": [
+   2194.0,
+   -5392.0,
+   6.0
+  ],
+  "sky": 4
+ },
+ "tox": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   220,
+   200,
+   30
+  ],
+  "fogFar": 250.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "Toxxulia Forest",
+  "outdoor": true,
+  "safe": [
+   203.0,
+   2295.0,
+   -45.0
+  ],
+  "sky": 0
+ },
+ "trakanon": {
+  "clip": 1000.0,
+  "expansion": 1,
+  "fog": [
+   210,
+   235,
+   213
+  ],
+  "fogFar": 250.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "Trakanon's Teeth",
+  "outdoor": true,
+  "safe": [
+   1486.0,
+   3868.0,
+   -336.0
+  ],
+  "sky": 0
+ },
+ "tutorial": {
+  "clip": 2000.0,
+  "expansion": 99,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 2000.0,
+  "fogNear": 500.0,
+  "heading": 0.0,
+  "name": "EverQuest Tutorial",
+  "outdoor": true,
+  "safe": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sky": 0
+ },
+ "twilight": {
+  "clip": 1000.0,
+  "expansion": 3,
+  "fog": [
+   0,
+   0,
+   0
+  ],
+  "fogFar": 1000.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Twilight",
+  "outdoor": true,
+  "safe": [
+   -1858.0,
+   -420.0,
+   -10.0
+  ],
+  "sky": 7
+ },
+ "umbral": {
+  "clip": 700.0,
+  "expansion": 3,
+  "fog": [
+   30,
+   10,
+   30
+  ],
+  "fogFar": 700.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Umbral Plains",
+  "outdoor": true,
+  "safe": [
+   1900.0,
+   -474.0,
+   23.0
+  ],
+  "sky": 7
+ },
+ "unrest": {
+  "clip": 300.0,
+  "expansion": 0,
+  "fog": [
+   40,
+   10,
+   60
+  ],
+  "fogFar": 300.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "The Estate of Unrest",
+  "outdoor": true,
+  "safe": [
+   52.0,
+   -38.0,
+   3.0
+  ],
+  "sky": 0
+ },
+ "veeshan": {
+  "clip": 1200.0,
+  "expansion": 1,
+  "fog": [
+   50,
+   0,
+   0
+  ],
+  "fogFar": 1200.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "Veeshan's Peak",
+  "outdoor": true,
+  "safe": [
+   1783.0,
+   -5.0,
+   15.0
+  ],
+  "sky": 0
+ },
+ "veksar": {
+  "clip": 1200.0,
+  "expansion": 1,
+  "fog": [
+   75,
+   0,
+   150
+  ],
+  "fogFar": 1200.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "Veksar",
+  "outdoor": false,
+  "safe": [
+   1.0,
+   -486.0,
+   -27.0
+  ],
+  "sky": 0
+ },
+ "velketor": {
+  "clip": 600.0,
+  "expansion": 2,
+  "fog": [
+   10,
+   130,
+   130
+  ],
+  "fogFar": 500.0,
+  "fogNear": 10.0,
+  "heading": 0.0,
+  "name": "Velketor's Labyrinth",
+  "outdoor": false,
+  "safe": [
+   -65.0,
+   581.0,
+   -152.0
+  ],
+  "sky": 0
+ },
+ "vexthal": {
+  "clip": 800.0,
+  "expansion": 3,
+  "fog": [
+   90,
+   110,
+   60
+  ],
+  "fogFar": 800.0,
+  "fogNear": 50.0,
+  "heading": 0.0,
+  "name": "Vex Thal",
+  "outdoor": true,
+  "safe": [
+   -1655.0,
+   257.0,
+   -35.0
+  ],
+  "sky": 0
+ },
+ "wakening": {
+  "clip": 1200.0,
+  "expansion": 2,
+  "fog": [
+   254,
+   254,
+   254
+  ],
+  "fogFar": 600.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "The Wakening Land",
+  "outdoor": true,
+  "safe": [
+   -5000.0,
+   -673.0,
+   -195.0
+  ],
+  "sky": 0
+ },
+ "warrens": {
+  "clip": 800.0,
+  "expansion": 2,
+  "fog": [
+   0,
+   15,
+   0
+  ],
+  "fogFar": 800.0,
+  "fogNear": 100.0,
+  "heading": 0.0,
+  "name": "The Warrens",
+  "outdoor": false,
+  "safe": [
+   -930.0,
+   748.0,
+   -37.0
+  ],
+  "sky": 0
+ },
+ "warslikswood": {
+  "clip": 800.0,
+  "expansion": 1,
+  "fog": [
+   210,
+   235,
+   210
+  ],
+  "fogFar": 600.0,
+  "fogNear": 60.0,
+  "heading": 0.0,
+  "name": "Warsliks Woods",
+  "outdoor": true,
+  "safe": [
+   -468.0,
+   -1429.0,
+   198.0
+  ],
+  "sky": 0
+ },
+ "westwastes": {
+  "clip": 1800.0,
+  "expansion": 2,
+  "fog": [
+   128,
+   128,
+   160
+  ],
+  "fogFar": 1800.0,
+  "fogNear": 200.0,
+  "heading": 0.0,
+  "name": "Western Wastes",
+  "outdoor": true,
+  "safe": [
+   -3499.0,
+   -4099.0,
+   -18.0
+  ],
+  "sky": 4
+ }
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EQ B-Roll</title>
+<meta name="description" content="Film classic EverQuest b-roll on your own private server: fly anywhere, never die, nothing attacks. Plus a renderer for smooth camera moves.">
+<style>
+  :root {
+    --bg: #faf8f3; --panel: #ffffff; --text: #22201b; --dim: #6b665c; --line: #e6e0d4;
+    --accent: #9a6b12; --accent-bg: #f6ecd7; --code-bg: #f3efe6; --warn-bg: #fff4e0; --warn: #8a5a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121315; --panel: #1a1c1f; --text: #e6e3dc; --dim: #9c978d; --line: #2c2f34;
+      --accent: #e0b660; --accent-bg: #2a2416; --code-bg: #202328; --warn-bg: #2b2112; --warn: #f0c070;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121315; --panel: #1a1c1f; --text: #e6e3dc; --dim: #9c978d; --line: #2c2f34;
+    --accent: #e0b660; --accent-bg: #2a2416; --code-bg: #202328; --warn-bg: #2b2112; --warn: #f0c070;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 80px; }
+  header { padding: 24px 0 8px; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h1 span { color: var(--accent); }
+  .lede { font-size: 1.15rem; color: var(--dim); margin: 0 0 24px; }
+  h2 { font-size: 1.35rem; margin: 48px 0 12px; padding-top: 8px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+  a { color: var(--accent); }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none;
+    font-weight: 650; padding: 12px 20px; border-radius: 8px; margin: 4px 8px 4px 0; }
+  .btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .card b { display: block; margin-bottom: 4px; }
+  .card p { margin: 0; color: var(--dim); font-size: .95rem; }
+  ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 16px 0; }
+  ol.steps > li { counter-increment: s; position: relative; padding: 0 0 20px 48px; }
+  ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 32px; height: 32px;
+    border-radius: 50%; background: var(--accent-bg); color: var(--accent); font-weight: 700;
+    display: grid; place-items: center; }
+  ol.steps > li > b { display: block; font-size: 1.05rem; }
+  code, kbd { font: .92em ui-monospace, "Cascadia Mono", Consolas, monospace; background: var(--code-bg);
+    padding: 1px 6px; border-radius: 4px; }
+  kbd { border: 1px solid var(--line); border-bottom-width: 2px; }
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--dim); font-weight: 600; }
+  td code { white-space: nowrap; }
+  .note { background: var(--warn-bg); color: var(--text); border-left: 3px solid var(--warn);
+    padding: 12px 14px; border-radius: 6px; margin: 16px 0; }
+  .note b { color: var(--warn); }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p, details ul { margin: 8px 0 0; }
+  footer { margin-top: 56px; color: var(--dim); font-size: .88rem; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>EQ <span>B-Roll</span></h1>
+    <p class="lede">Film classic EverQuest on your own private server. You can fly anywhere, you can't die,
+      and nothing attacks you. There's also a renderer for smooth, repeatable camera moves.</p>
+    <a class="btn" href="https://github.com/kevroy314/eq-b-roll/archive/refs/heads/main.zip">Download (zip)</a>
+    <a class="btn secondary" href="https://github.com/kevroy314/eq-b-roll">View on GitHub</a>
+  </header>
+
+  <div class="cards">
+    <div class="card"><b>The real game</b><p>The actual 2002 client on a server that runs only on your PC.
+      Every character is a flying, invulnerable GM, and nothing aggroes.</p></div>
+    <div class="card"><b>The Studio</b><p>A renderer for the same zones. Place camera keyframes and export
+      frame-perfect MP4s up to 4K, with motion blur.</p></div>
+  </div>
+
+  <h2 id="setup">Set up (once)</h2>
+  <p>You need a Windows 10 or 11 PC with a mouse plugged in, about 15 GB of free disk space, and an internet
+    connection. Setup downloads everything else and installs it for you.</p>
+  <ol class="steps">
+    <li><b>Download and unzip</b>
+      Click <b>Download</b> above. Before unzipping, right-click the zip, choose <b>Properties</b>, tick
+      <b>Unblock</b> and press OK. Then unzip it somewhere simple, such as <code>C:\eq-b-roll</code>.
+      Avoid <code>Program Files</code>.</li>
+    <li><b>Double-click <code>Setup.bat</code></b>
+      It checks for <b>Docker Desktop</b>, which runs the game server, and offers to install it if it's
+      missing. If it installs Docker: restart your PC, open Docker Desktop once and accept its terms
+      (no account needed), then double-click <code>Setup.bat</code> again.</li>
+    <li><b>Let it finish</b>
+      The first run downloads about 8 GB: the server, the game client, and models for the Studio. It
+      takes a while. At the end you'll have two shortcuts on your desktop: <b>EQ B-Roll</b> (the game)
+      and <b>EQ B-Roll Studio</b>.</li>
+  </ol>
+  <div class="note"><b>Safe to re-run.</b> If anything goes wrong, fix what it tells you and run
+    <code>Setup.bat</code> again. It picks up where it left off and never deletes your characters.</div>
+
+  <h2 id="game">Filming in the real game</h2>
+  <ol class="steps">
+    <li><b>Start it</b> Double-click <b>EQ B-Roll</b>. The server starts by itself whenever Docker
+      Desktop is running.</li>
+    <li><b>Log in with any name and password</b> The first time, it asks for them twice; that creates
+      the account. Then create any character.</li>
+    <li><b>Turn up the view distance</b> Press <kbd>Alt</kbd>+<kbd>O</kbd>, go to <b>Display</b>, drag
+      <b>Clip Plane</b> all the way up, and untick <b>Level of Detail</b>.</li>
+  </ol>
+
+  <h3>Moving around</h3>
+  <div class="table-wrap"><table>
+    <tr><th>To</th><th>Do</th></tr>
+    <tr><td>Fly up or down</td><td>Look up or down with <kbd>Page Up</kbd> / <kbd>Page Down</kbd> (or hold the right mouse button), then move forward with <kbd>W</kbd></td></tr>
+    <tr><td>Level your view</td><td><kbd>Home</kbd></td></tr>
+  </table></div>
+
+  <h3>Commands (type them in the chat box)</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>#zone qeynos</code></td><td>Go to a zone. Other good ones: <code>gfaydark</code>, <code>northkarana</code>, <code>erudsxing</code>, <code>lavastorm</code>, <code>airplane</code></td></tr>
+    <tr><td><code>#goto -551 315 44</code></td><td>Teleport to an exact spot, as x&nbsp;y&nbsp;z. The game's <code>/loc</code> shows the same numbers as y,&nbsp;x,&nbsp;z.</td></tr>
+    <tr><td><code>#set time 19</code></td><td>Time of day, from 0 to 23. Try 6 for dawn, 12 for noon, 19 for dusk, 23 for night.</td></tr>
+    <tr><td><code>#set weather 1 0 30</code></td><td>Rain for 30 minutes. Use <code>2</code> for snow and <code>0</code> for clear; clear it before switching.</td></tr>
+    <tr><td><code>#set zone clipping 500 10000 2000 9500</code></td><td>View distance and fog: min, max, fog start, fog end. Lower the fog numbers for more haze.</td></tr>
+    <tr><td><code>#size 10</code>, <code>#set race 12</code></td><td>Change your own size or appearance for a shot.</td></tr>
+  </table></div>
+  <p>A good first spot to test everything: <code>#zone qeynos</code>, then <code>#goto -551 315 44</code>.
+    It has water, torches, sky, and plenty of NPCs.</p>
+
+  <h3>Recording</h3>
+  <p>In OBS, add a <b>Window Capture</b> of the game window. At your monitor's resolution the game runs
+    borderless, which is ideal for capture. For a movable window, pick a smaller resolution under
+    Options&nbsp;→&nbsp;Display.</p>
+
+  <h2 id="studio">Filming in the Studio</h2>
+  <p>Double-click <b>EQ B-Roll Studio</b>. It opens in your browser (use Chrome or Edge).</p>
+  <div class="table-wrap"><table>
+    <tr><th>Key</th><th>Does</th></tr>
+    <tr><td>Click the view</td><td>Take the mouse to look around; <kbd>Esc</kbd> gives it back</td></tr>
+    <tr><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>, <kbd>E</kbd>/<kbd>Q</kbd></td><td>Fly; up and down</td></tr>
+    <tr><td><kbd>K</kbd></td><td>Drop a camera keyframe here</td></tr>
+    <tr><td><kbd>P</kbd></td><td>Preview the shot</td></tr>
+    <tr><td><kbd>R</kbd></td><td>Record a freehand flight instead</td></tr>
+    <tr><td><kbd>Tab</kbd></td><td>Hide the panel</td></tr>
+  </table></div>
+  <p>When the preview looks right, press <b>Render MP4</b>. Clips are saved in the <code>renders</code>
+    folder. Setup exports five zones for the Studio. To add more, open a command prompt in the
+    download folder and run <code>tools\python\python.exe broll.py extract commons</code>, using the
+    zone's short name.</p>
+
+  <h2 id="help">If something goes wrong</h2>
+  <details><summary>The game crashes ("memory could not be read") when I click Play</summary>
+    <p>Windows can't find a mouse. This happens on PCs used only through remote desktop or VNC. Plug in
+    any mouse, even one you never touch. If that's impossible, there's a virtual-mouse workaround in the
+    <a href="https://github.com/kevroy314/eq-b-roll/blob/main/docs/LOCAL_SERVER.md">technical notes</a>
+    (problem #2).</p></details>
+  <details><summary>Docker Desktop won't start</summary>
+    <p>It needs hardware virtualization, a BIOS setting usually called "Intel VT-x" or "AMD SVM". Most
+    PCs have it on. If it's off, turn it on in the BIOS. Also make sure you opened Docker Desktop once
+    and accepted its terms.</p></details>
+  <details><summary>"Port is already allocated"</summary>
+    <p>Another EverQuest server, or another program, is using the same ports. Stop it in Docker Desktop
+    under Containers, then run <code>Setup.bat</code> again.</p></details>
+  <details><summary>Setup says client files are missing</summary>
+    <p>Antivirus sometimes deletes one of the old client's files. Add an exclusion for
+    <code>C:\TAKP-broll</code> in Windows Security, then run <code>Setup.bat</code> again.</p></details>
+  <details><summary>Windows says "Windows protected your PC" when I run Setup.bat</summary>
+    <p>That's SmartScreen being cautious about downloaded scripts. Click <b>More info</b>, then
+    <b>Run anyway</b>. Unblocking the zip before unzipping (step 1) avoids this.</p></details>
+  <details><summary>How do I stop the server?</summary>
+    <p>Quit Docker Desktop, or stop <code>eq-broll-server</code> under its Containers tab. It starts again
+    by itself the next time Docker Desktop runs.</p></details>
+
+  <footer>
+    The server is <a href="https://github.com/EQMacEmu/Server">EQMacEmu</a> (The Al'Kabor Project), run with
+    the community <a href="https://github.com/jcon321/EQMacEmuDockerHub">Docker image</a>. The client is the
+    <a href="https://wiki.takp.info/wiki/Getting_Started_on_Windows">TAKP client</a> with the
+    <a href="https://github.com/CoastalRedwood/eqw_takp">eqw_takp</a> and
+    <a href="https://github.com/EQMacEmu/eqgame_dll_takp">eqgame_dll_takp</a> fixes. Studio models are exported
+    by <a href="https://github.com/LanternEQ/LanternExtractor">LanternExtractor</a>. No game files are
+    distributed here; everything is downloaded from those projects on your PC. EverQuest is a trademark of
+    Daybreak Game Company; this is an unaffiliated fan tool.
+    <br>Technical notes: <a href="https://github.com/kevroy314/eq-b-roll/blob/main/docs/LOCAL_SERVER.md">docs/LOCAL_SERVER.md</a>.
+  </footer>
+</main>
+</body>
+</html>

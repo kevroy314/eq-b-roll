@@ -1,0 +1,9 @@
+# Files that run inside the Linux server container must keep LF endings even when the repo is
+# checked out on Windows (Git for Windows converts to CRLF by default, which breaks bash and patch).
+server/** text eol=lf
+*.sh      text eol=lf
+*.diff    text eol=lf
+*.sql     text eol=lf
+# Windows scripts get CRLF.
+*.bat     text eol=crlf
+*.ps1     text eol=crlf

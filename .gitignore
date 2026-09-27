@@ -1,0 +1,11 @@
+# your exported game data and personal output — never commit these
+zones/*
+!zones/.gitkeep
+renders/*
+!renders/.gitkeep
+takes/*
+!takes/.gitkeep
+tools/
+config.json
+__pycache__/
+*.pyc
