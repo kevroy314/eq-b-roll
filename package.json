@@ -1,5 +1,8 @@
 {
   "private": true,
   "type": "module",
-  "scripts": { "test": "node dev/test_take.mjs" }
+  "scripts": {
+    "test": "node dev/test_take.mjs && node dev/test_daynight.mjs && node dev/test_fight.mjs"
+  },
+  "version": "1.1.0"
 }

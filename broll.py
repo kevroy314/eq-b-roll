@@ -19,6 +19,7 @@ import shutil
 import stat
 import subprocess
 import sys
+import threading
 import urllib.request
 import webbrowser
 import zipfile
@@ -38,6 +39,7 @@ LANTERN_RELEASES = "https://api.github.com/repos/LanternEQ/LanternExtractor/rele
 # A zone's archives are <zone>.s3d plus companions (<zone>_obj.s3d, <zone>_chr.s3d, <zone>_2_obj...).
 # Anything with one of these suffixes is a companion, not a zone of its own.
 COMPANION = re.compile(r"_(obj\d*|chr\d*|\d+_obj|2_chr|amb|lit|assets)$|^(gequip\d*|global\d*.*|sky)$")
+VERSION = (ROOT / "VERSION").read_text().strip() if (ROOT / "VERSION").is_file() else "dev"
 SAFE_NAME = re.compile(r"^[A-Za-z0-9_.\- ]{1,80}$")
 
 
@@ -72,6 +74,13 @@ def eq_dir(arg: str | None) -> Path:
 
 def zone_info() -> dict:
     return json.loads((APP / "zoneinfo.json").read_text())
+
+
+def configured_eq() -> Path | None:
+    """The remembered EverQuest folder, or None. Unlike eq_dir(), never exits (used by the server)."""
+    raw = load_config().get("eq_dir")
+    p = Path(raw).expanduser() if raw else None
+    return p if p and p.is_dir() else None
 
 
 def client_zones(eq: Path) -> list[str]:
@@ -210,7 +219,7 @@ def extract_shared(exe: Path, eq: Path) -> None:
         shutil.rmtree(out / name, ignore_errors=True)
 
 
-def extract(zones: list[str], eq: Path, force: bool) -> None:
+def extract(zones: list[str], eq: Path, force: bool) -> tuple[list[str], list[str]]:
     exe = lantern_exe()
     out = exe.parent / "Exports"
     ZONES.mkdir(exist_ok=True)
@@ -252,6 +261,64 @@ def extract(zones: list[str], eq: Path, force: bool) -> None:
         print(f"  {z}: ok ({mb:.0f} MB, {len(anim)} animated textures, {chars} creature models)")
         ok.append(z)
     print(f"\n{len(ok)} ready, {len(failed)} failed." + (f"  Failed: {' '.join(failed)}" if failed else ""))
+    return ok, failed
+
+
+class ExtractJobs:
+    """Background zone exports for the Studio's zone picker.
+
+    One worker, one zone at a time: LanternExtractor writes to a single shared Exports folder, so
+    two exports at once would trample each other. The page polls status() to show progress.
+    """
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.queue: list[str] = []
+        self.current: str | None = None
+        self.done: list[str] = []
+        self.failed: list[str] = []
+        self.thread: threading.Thread | None = None
+
+    def add(self, zones: list[str]) -> None:
+        have = set(extracted_zones())
+        with self.lock:
+            for z in zones:
+                if z not in have and z != self.current and z not in self.queue:
+                    self.queue.append(z)
+            if self.queue and not (self.thread and self.thread.is_alive()):
+                self.thread = threading.Thread(target=self._run, daemon=True)
+                self.thread.start()
+
+    def cancel(self) -> None:
+        with self.lock:
+            self.queue.clear()
+
+    def status(self) -> dict:
+        with self.lock:
+            return {"current": self.current, "queue": list(self.queue),
+                    "done": list(self.done), "failed": list(self.failed)}
+
+    def _run(self) -> None:
+        while True:
+            with self.lock:
+                if not self.queue:
+                    self.current = None
+                    return
+                self.current = self.queue.pop(0)
+                z = self.current
+            ok = False
+            try:
+                eq = configured_eq()
+                if eq:
+                    good, _ = extract([z], eq, force=False)
+                    ok = z in good
+            except BaseException as e:          # noqa: BLE001 - sys.exit inside extract, etc.
+                print(f"  {z}: export failed: {e}", flush=True)
+            with self.lock:
+                (self.done if ok else self.failed).append(z)
+
+
+JOBS = ExtractJobs()
 
 
 # ─── server ───────────────────────────────────────────────────────────────────────────────────
@@ -290,7 +357,17 @@ class Handler(SimpleHTTPRequestHandler):
             self.end_headers()
             return
         if path == "/api/zones":
-            return self._json({"zones": extracted_zones()})
+            # "zones": ready to load. "client": everything in the EverQuest client, which the page
+            # offers to export on first use.
+            eq = configured_eq()
+            try:
+                client = client_zones(eq) if eq else []
+            except OSError:
+                client = []
+            return self._json({"zones": extracted_zones(), "client": client, "version": VERSION,
+                               "extract": JOBS.status()})
+        if path == "/api/extract":
+            return self._json(JOBS.status())
         if path.startswith("/api/characters/"):
             # Which creature models and textures exist, for the zone and the shared set. Lets the
             # app pick armour/face texture variants without probing for files that aren't there.
@@ -322,6 +399,23 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         path = self.path.split("?")[0]
+        if path in ("/api/extract", "/api/extract/cancel"):
+            n = int(self.headers.get("Content-Length", 0) or 0)
+            try:
+                body = json.loads(self.rfile.read(n) or b"{}")
+            except ValueError:
+                body = {}
+            if path.endswith("/cancel"):
+                JOBS.cancel()
+                return self._json(JOBS.status())
+            eq = configured_eq()
+            if not eq:
+                return self._json({"error": "No EverQuest folder configured. Run Setup.bat, or "
+                                            "`broll.py extract <zone> --eq <folder>` once."}, 400)
+            known = set(client_zones(eq))
+            want = sorted(known) if body.get("all") else [z for z in body.get("zones", []) if z in known]
+            JOBS.add(want)
+            return self._json(JOBS.status())
         m = re.match(r"^/api/(takes|renders)/(.+)$", path)
         if not m:
             return self._json({"error": "not found"}, 404)
@@ -353,7 +447,7 @@ def serve(port: int, host: str, open_browser: bool) -> None:
     except OSError:
         sys.exit(f"Port {port} is already in use (is B-Roll already running?). Try --port {port + 1}")
     url = f"http://localhost:{port}/"
-    print(f"EQ B-Roll on {url}  ({len(have)} zones: {' '.join(have)})\nCtrl+C to stop.")
+    print(f"EQ B-Roll {VERSION} on {url}  ({len(have)} zones: {' '.join(have)})\nCtrl+C to stop.")
     if open_browser:
         webbrowser.open(url)
     try:

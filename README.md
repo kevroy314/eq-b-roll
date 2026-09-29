@@ -1,7 +1,8 @@
 # EQ B-Roll
 
 Film classic EverQuest for streams and edits, without a character to babysit.
-**Step-by-step instructions: <https://kevroy314.github.io/eq-b-roll/>**
+**Step-by-step instructions: <https://kevroy314.github.io/eq-b-roll/>** · Version 1.1.0 ·
+[what's new](CHANGELOG.md)
 
 Two ways to shoot, both set up by one double-click:
 
@@ -24,6 +25,15 @@ No game files are in this repo; everything is downloaded to your PC from the pro
 publish it. See the [instructions page](https://kevroy314.github.io/eq-b-roll/) for in-game
 commands and troubleshooting, and [docs/LOCAL_SERVER.md](docs/LOCAL_SERVER.md) for why each piece
 of the setup exists.
+
+### Updating
+
+- **From 1.1.0 on:** close the Studio window and double-click **`Update.bat`**. It downloads the
+  latest version over your folder, keeps your zones, takes, renders and settings, and re-runs the
+  setup (quick when nothing changed). The Studio panel tells you when an update is out.
+- **From 1.0.0 (no Update.bat yet):** download the zip again, open it, and copy everything inside
+  its `eq-b-roll-main` folder into your existing EQ B-Roll folder, replacing files. Your zones and
+  takes aren't in the zip, so they're untouched. From then on, use `Update.bat`.
 
 ### What Setup.bat puts together
 
@@ -51,6 +61,13 @@ UI, no trains. Just the zone, its sky, its NPCs and its doors.
 - **Takes are saved as files**, so a shot can be re-rendered later at another size or shared with
   someone else who has the zone.
 - **Go to `/loc`**: paste coordinates from the game to jump to an exact spot.
+- **Every zone in your client**: pick any zone; ones you haven't used are exported on the spot
+  (about a minute), or export them all in the background.
+- **Day and night**: time of day with a time-lapse. The sun and moon move, stars come out, and sky,
+  fog and scene tint while fires stay lit. Reproducible in renders.
+- **Speed from a walk to a warp**: 1 to 20,000 units/s, presets on keys 1-6, adjustable Shift boost.
+- **Staged fights**: place a player and any NPC from the zone and make them fight (charge, blows,
+  flinches, an optional death). Saved with the shot, renders identically.
 
 `Setup.bat` sets all of this up. The rest of this section is for running the Studio by hand, for
 example on macOS or Linux, or against a different client.
@@ -98,7 +115,8 @@ That opens `http://localhost:8631/` in your browser. On Windows you can double-c
 | Click the view | Take the mouse to look around. **Esc** gives it back. |
 | **W A S D** | Fly (you go where you look) |
 | **E** / **Space**, **Q** / **C** | Straight up, straight down |
-| **Shift**, mouse wheel | 4× faster while held; set flying speed |
+| **Shift**, mouse wheel | boost while held (set the multiplier under Camera); set flying speed |
+| **1**–**6** | speed presets: walk, run, mount, griffon, fly-by, warp |
 | **Z** **X**, **V** | Roll the camera (dutch angle); level it |
 | **[** **]** | Zoom (field of view) |
 | **K** | Add a keyframe at the current view |
@@ -152,6 +170,11 @@ reopen it and render it again at another size. *Export/Import* moves a take betw
   gaps above rooftops. Keep the camera where players could plausibly see.
 - **Scale**: 10 EQ units is roughly 1 m. A human is about 6 units tall, so dungeon ceilings are
   closer than you'd expect.
+- **Staged fights are mocked, not simulated**: animations and timing only, with no weapons in
+  hand, no damage numbers and no spell effects. Stage them on open ground; a death animation can
+  drop the body into a nearby wall.
+- **Day and night is an emulation**, tuned to look right on video rather than to copy the client's
+  exact lighting.
 - **What's in the scene:** the zone, EQ's own sky layers, doors and gates from the server
   database, and NPCs at their spawn points using the client's models, animations and armour
   textures. Patrollers walk their real routes. Water, lava and fire textures animate, and water is

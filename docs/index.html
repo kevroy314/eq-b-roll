@@ -65,7 +65,7 @@
 <body>
 <main>
   <header>
-    <h1>EQ <span>B-Roll</span></h1>
+    <h1>EQ <span>B-Roll</span> <small style="font-size:.9rem;color:var(--dim);font-weight:500">v1.1.0</small></h1>
     <p class="lede">Film classic EverQuest on your own private server. You can fly anywhere, you can't die,
       and nothing attacks you. There's also a renderer for smooth, repeatable camera moves.</p>
     <a class="btn" href="https://github.com/kevroy314/eq-b-roll/archive/refs/heads/main.zip">Download (zip)</a>
@@ -78,6 +78,11 @@
     <div class="card"><b>The Studio</b><p>A renderer for the same zones. Place camera keyframes and export
       frame-perfect MP4s up to 4K, with motion blur.</p></div>
   </div>
+
+  <div class="note"><b>New in 1.1:</b> the Studio now has every zone in your client, a day/night
+    cycle with time-lapse, speeds from a walk to a warp (keys 1–6), and staged fights: place a
+    player and an NPC and make them fight. Updating from 1.0? See <a href="#update">Updating</a>.
+    <a href="https://github.com/kevroy314/eq-b-roll/blob/main/CHANGELOG.md">Full changelog</a>.</div>
 
   <h2 id="setup">Set up (once)</h2>
   <p>You need a Windows 10 or 11 PC with a mouse plugged in, about 15 GB of free disk space, and an internet
@@ -98,6 +103,19 @@
   </ol>
   <div class="note"><b>Safe to re-run.</b> If anything goes wrong, fix what it tells you and run
     <code>Setup.bat</code> again. It picks up where it left off and never deletes your characters.</div>
+
+  <h2 id="update">Updating</h2>
+  <p><b>If you have 1.1 or newer:</b> close the Studio window and double-click <code>Update.bat</code>
+    in your EQ B-Roll folder. It fetches the latest version and keeps your zones, saved shots, videos
+    and settings. The Studio panel shows a yellow note when an update is out.</p>
+  <p><b>If you installed 1.0</b> (there's no <code>Update.bat</code> in your folder yet):</p>
+  <ol class="steps">
+    <li><b>Download the zip again</b> with the button at the top. Unblock it as before.</li>
+    <li><b>Copy it over your folder</b> Open the zip, open the <code>eq-b-roll-main</code> folder inside,
+      select everything, and drag it into your existing EQ B-Roll folder. Choose <b>Replace</b>. Your
+      zones and saved shots aren't in the zip, so nothing of yours is overwritten.</li>
+    <li><b>Done</b> Open <b>EQ B-Roll Studio</b> as usual. From now on, use <code>Update.bat</code>.</li>
+  </ol>
 
   <h2 id="game">Filming in the real game</h2>
   <ol class="steps">
@@ -140,15 +158,43 @@
     <tr><th>Key</th><th>Does</th></tr>
     <tr><td>Click the view</td><td>Take the mouse to look around; <kbd>Esc</kbd> gives it back</td></tr>
     <tr><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>, <kbd>E</kbd>/<kbd>Q</kbd></td><td>Fly; up and down</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>6</kbd></td><td>Speed: walk, run, mount, griffon, fly-by, warp. The mouse wheel fine-tunes it.</td></tr>
+    <tr><td><kbd>Shift</kbd></td><td>Boost while held (set how much under Camera → Shift boost)</td></tr>
     <tr><td><kbd>K</kbd></td><td>Drop a camera keyframe here</td></tr>
     <tr><td><kbd>P</kbd></td><td>Preview the shot</td></tr>
     <tr><td><kbd>R</kbd></td><td>Record a freehand flight instead</td></tr>
     <tr><td><kbd>Tab</kbd></td><td>Hide the panel</td></tr>
   </table></div>
   <p>When the preview looks right, press <b>Render MP4</b>. Clips are saved in the <code>renders</code>
-    folder. Setup exports five zones for the Studio. To add more, open a command prompt in the
-    download folder and run <code>tools\python\python.exe broll.py extract commons</code>, using the
-    zone's short name.</p>
+    folder.</p>
+
+  <h3>Zones</h3>
+  <p>The Zone list has every zone in your EverQuest client. Zones under <b>Ready</b> load straight away.
+    Pick any other zone and it's exported from your client first, which takes about a minute. To get them
+    all, press <b>Export all zones</b>: it works in the background (a couple of hours, about 8 GB) while
+    you keep filming, and each zone moves to Ready as it finishes.</p>
+
+  <h3>Speed and fly-bys</h3>
+  <p>Fly speed goes from a slow 1 unit/s up to 20,000. <kbd>5</kbd> (fly-by) and <kbd>6</kbd> (warp)
+    cross a zone in seconds. For a keyframed fly-by, set the Take's <b>Speed</b> high as well; turn
+    <b>Fog</b> all the way up (off) so the far end of the zone is visible.</p>
+
+  <h3>Time of day</h3>
+  <p>Under <b>Look</b>, tick <b>Time of day</b> and drag <b>Hour</b>. <b>Time-lapse</b> makes time pass
+    during the shot (in game hours per real minute; negative runs backwards), for sunsets and nightfall.
+    It's saved with the shot, so every render matches the preview.</p>
+
+  <h3>Staged fights</h3>
+  <ol class="steps">
+    <li><b>Place a player</b> Under <b>Stage</b>, pick race, gender, armour and helm, point the crosshair at
+      the ground and press <b>Place player at crosshair</b>.</li>
+    <li><b>Place an opponent</b> Pick any creature from this zone and place it a little way off. It will
+      run in to fight.</li>
+    <li><b>Fight!</b> Choose who wins (or nobody) and how long it lasts, then press <b>Fight!</b>. It starts
+      a second later. Build your camera move around it: the fight is part of the shot, and previews and
+      renders show exactly the same fight.</li>
+  </ol>
+  <p>Stage fights on open ground: a falling body can end up inside a nearby wall.</p>
 
   <h2 id="help">If something goes wrong</h2>
   <details><summary>The game crashes ("memory could not be read") when I click Play</summary>

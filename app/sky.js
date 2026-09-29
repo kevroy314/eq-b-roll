@@ -61,7 +61,7 @@ export class Sky {
       useTex: { value: 0 }, useBody: { value: 0 },
       top: { value: new THREE.Color() }, horizon: { value: new THREE.Color() },
       tint: { value: new THREE.Color(1, 1, 1) },
-      time: { value: 0 }, wind: { value: 1 }, cloudAmt: { value: 1 },
+      time: { value: 0 }, wind: { value: 1 }, cloudAmt: { value: 1 }, stars: { value: 0 },
       bodyDir: { value: new THREE.Vector3(0, 0.6, -0.8).normalize() },
     };
     const mat = new THREE.ShaderMaterial({
@@ -75,7 +75,8 @@ export class Sky {
         }`,
       fragmentShader: /* glsl */`
         uniform sampler2D skyTex, cloudTex, bodyTex;
-        uniform float useTex, useBody, time, wind, cloudAmt;
+        uniform float useTex, useBody, time, wind, cloudAmt, stars;
+        float hash3(vec3 p) { p = fract(p * 0.3183099 + 0.1); p *= 17.0; return fract(p.x * p.y * p.z * (p.x + p.y + p.z)); }
         uniform vec3 top, horizon, tint, bodyDir;
         varying vec3 vDir;
         void main() {
@@ -92,6 +93,12 @@ export class Sky {
             c = mix(s, k.rgb, a) * tint;
           } else {
             c = mix(horizon, top, pow(clamp(d.y, 0.0, 1.0), 0.6));
+          }
+          if (stars > 0.001 && d.y > 0.0) {             // night: a fixed star field
+            vec3 cell = floor(d * 420.0);
+            float h = hash3(cell);
+            float twinkle = 0.75 + 0.25 * sin(time * 1.7 + h * 40.0);
+            c += vec3(step(0.9965, h) * (h - 0.9965) / 0.0035 * twinkle) * stars * smoothstep(0.02, 0.25, d.y);
           }
           if (useBody > 0.5) {                          // sun / moon / Norrath billboard
             vec3 b = normalize(bodyDir);
@@ -124,7 +131,9 @@ export class Sky {
   }
 
   // preset: key of SKY_PRESETS, 'gradient', or 'none'
-  set(preset, { top, horizon, tint = '#ffffff', wind = 1, clouds = 1, sunAz = 135, sunEl = 40, textures = true }) {
+  // day: optional { tint:[r,g,b], stars, dir:[x,y,z], body:'sun'|'moon' } from daynight.js; it
+  // overrides the static sun position and tints the sky for the time of day.
+  set(preset, { top, horizon, tint = '#ffffff', wind = 1, clouds = 1, sunAz = 135, sunEl = 40, textures = true, day = null }) {
     const u = this.uniforms;
     u.top.value.set(top);
     u.horizon.value.set(horizon);
@@ -138,13 +147,21 @@ export class Sky {
       u.skyTex.value = tex(P.sky);
       u.cloudTex.value = tex(P.cloud);
       u.tint.value.set(tint).multiplyScalar(P.dim ?? 1);
+      if (day) u.tint.value.multiply(new THREE.Color(...day.tint));
       if (P.body) {
-        u.bodyTex.value = tex(P.body);
+        const body = day && P.body === 'sun' ? day.body : P.body;
+        u.bodyTex.value = tex(body);
         u.useBody.value = 1;
-        const az = sunAz * Math.PI / 180, el = Math.max(8, sunEl) * Math.PI / 180;
-        u.bodyDir.value.set(Math.cos(el) * Math.sin(az), Math.sin(el), Math.cos(el) * Math.cos(az));
+        if (day) u.bodyDir.value.set(...day.dir);
+        else {
+          const az = sunAz * Math.PI / 180, el = Math.max(8, sunEl) * Math.PI / 180;
+          u.bodyDir.value.set(Math.cos(el) * Math.sin(az), Math.sin(el), Math.cos(el) * Math.cos(az));
+        }
       }
     }
+    // Plain-gradient skies get the time-of-day tint through their colours instead.
+    if (day && !(P && textures)) { u.top.value.multiply(new THREE.Color(...day.tint)); }
+    u.stars.value = day ? day.stars : 0;
   }
 
   update(t) { this.uniforms.time.value = t; }

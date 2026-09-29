@@ -4,12 +4,7 @@
 // phase, where a patroller is along its path, whether it is walking or paused. That is what lets
 // a render reproduce the preview exactly, and two renders of the same take match frame for frame.
 import * as THREE from './vendor/three.module.js';
-import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { clone as skeletonClone } from './vendor/SkeletonUtils.js';
-import { buildMaterials } from './zone.js';
-
-const loader = new GLTFLoader();
-const texLoader = new THREE.TextureLoader();
+import { CharacterFactory } from './characters.js';
 
 // Facing. A world direction is an angle beta = atan2(dx, dz). A model whose local "forward" is at
 // angle MODEL_FWD faces beta when rotated by beta - MODEL_FWD. An EQ heading h (0 = north, which
@@ -33,32 +28,6 @@ function hash01(n) {
   return ((x ^ (x >>> 16)) >>> 0) / 4294967296;
 }
 
-// d_humch0001 -> {code:'hum', part:'ch', tex:'00', idx:'01'}. EQ texture names encode the body
-// part and the armour set; heads encode the face in the first digit of idx.
-const TEX_RE = /^(?:[a-z0-9]+_)?([a-z]{3})([a-z]{2})(\d\d)(\d\d)$/;
-
-function variantName(matName, npc) {
-  const m = TEX_RE.exec(matName);
-  if (!m) return null;
-  const [, code, part, tex, idx] = m;
-  if (part === 'he') return `${code}he${tex}${npc.face % 10}${idx[1]}`;
-  if (npc.tex > 0 && npc.tex < 100) return `${code}${part}${String(npc.tex).padStart(2, '0')}${idx}`;
-  return null;
-}
-
-// Models the client animates with ANOTHER model's animation set (Kelethin guards use the wood elf
-// set, Qeynos citizens the human one...). Lantern exports no clips for those, so we borrow from the
-// first playable race whose skeleton contains every one of the model's bones; the mixer binds
-// tracks by bone name, so a superset skeleton drives the model correctly.
-const DONORS = { m: ['hum', 'elm', 'bam', 'dam', 'ham', 'him', 'erm', 'dwm', 'hom', 'gnm', 'ogm', 'trm'],
-                 f: ['huf', 'elf', 'baf', 'daf', 'haf', 'hif', 'erf', 'dwf', 'hof', 'gnf', 'ogf', 'trf'] };
-
-function boneNames(root) {
-  const names = new Set();
-  root.traverse(o => { if (o.isSkinnedMesh) for (const b of o.skeleton.bones) names.add(b.name); });
-  return names;
-}
-
 export class NPCs {
   constructor() {
     this.group = new THREE.Group();
@@ -67,113 +36,45 @@ export class NPCs {
     this.stats = { placed: 0, skipped: 0, unmapped: new Map(), borrowed: new Map() };
   }
 
-  async load(zoneKey, data, { raceModels, raceSize, listing, groundAt, maxAniso, onProgress }) {
-    const has = (where, name) => listing[where].models.includes(name);
-    const hasTex = (where, name) => listing[where].textures.includes(name);
-    const pick = (code, helm) => {
-      // Zone-local models win (a zone's orcs are that zone's orcs); playable races come from global.
-      for (const where of ['zone', 'global']) {
-        if (helm > 0 && has(where, `${code}_${String(helm).padStart(2, '0')}`))
-          return { where, file: `${code}_${String(helm).padStart(2, '0')}` };
-        if (has(where, code)) return { where, file: code };
-      }
-      return null;
-    };
-
-    // One template per distinct look; instances are skeleton clones of it.
+  async load(zoneKey, data, { raceModels, raceSize, listing, groundAt, maxAniso, onProgress, factory }) {
+    this.factory = factory || new CharacterFactory(zoneKey, { raceModels, raceSize, listing, maxAniso });
+    const F = this.factory;
+    // Group spawns by look so each model/texture combination is built once.
     const want = new Map();
     for (const [i, s] of data.spawns.entries()) {
-      const g = raceModels[s.race];
-      const code = g && (g[s.gender] ?? g[0] ?? g[2]);
-      if (!code) { this.stats.skipped++; this.stats.unmapped.set(s.race, (this.stats.unmapped.get(s.race) || 0) + 1); continue; }
-      const src = pick(code.toLowerCase(), s.helm);
-      if (!src) { this.stats.skipped++; this.stats.unmapped.set(`${s.race}:${code}`, (this.stats.unmapped.get(`${s.race}:${code}`) || 0) + 1); continue; }
+      const src = F.resolve(s);
+      if (!src || src.missing) {
+        const k = src ? `${s.race}:${src.missing}` : s.race;
+        this.stats.skipped++; this.stats.unmapped.set(k, (this.stats.unmapped.get(k) || 0) + 1);
+        continue;
+      }
       const key = `${src.where}/${src.file}|${s.tex}|${s.face}`;
-      if (!want.has(key)) want.set(key, { ...src, npc: s, spawns: [] });
+      if (!want.has(key)) want.set(key, { spec: s, spawns: [] });
       want.get(key).spawns.push(i);
     }
-
-    const gltfCache = new Map();
-    const getGltf = (where, file) => {
-      const url = where === 'zone' ? `/zones/${zoneKey}/Characters/${file}.gltf` : `/zones/_global/Characters/${file}.gltf`;
-      if (!gltfCache.has(url)) gltfCache.set(url, loader.loadAsync(url).catch(() => null));
-      return gltfCache.get(url);
-    };
-
     let done = 0;
-    for (const [, t] of want) {
-      const gltf = await getGltf(t.where, t.file);
+    for (const [, w] of want) {
+      const tpl = await F.template(w.spec);
       onProgress?.(++done / want.size);
-      if (!gltf) { this.stats.skipped += t.spawns.length; continue; }
-      const texBase = t.where === 'zone' ? `/zones/${zoneKey}/Characters/Textures` : '/zones/_global/Characters/Textures';
-      const template = skeletonClone(gltf.scene);
-      const meshes = [];
-      template.traverse(o => {
-        if (!o.isMesh) return;
-        let mat = o.material;
-        const v = variantName(mat.name, t.npc);
-        if (v && hasTex(t.where, v) && mat.map) {
-          const tex = texLoader.load(`${texBase}/${v}.png`);
-          Object.assign(tex, { flipY: mat.map.flipY, wrapS: mat.map.wrapS, wrapT: mat.map.wrapT });
-          mat = mat.clone();
-          mat.map = tex;
-        }
-        o.userData.src = mat;
-        o.frustumCulled = false;       // skinned bounds are bind-pose only; we distance-cull instead
-        meshes.push(o);
-      });
-      buildMaterials(meshes, { maxAniso });
-      let anims = gltf.animations;
-      if (!anims.length) {
-        const need = boneNames(gltf.scene);
-        const order = t.npc.gender === 1 ? [...DONORS.f, ...DONORS.m] : [...DONORS.m, ...DONORS.f];
-        for (const d of order) {
-          if (!need.size || !has('global', d)) continue;
-          const dg = await getGltf('global', d);
-          if (!dg || !dg.animations.length) continue;
-          const got = boneNames(dg.scene);
-          if ([...need].every(n => got.has(n))) { anims = dg.animations; this.stats.borrowed.set(t.file, d); break; }
-        }
-      }
-      const clips = Object.fromEntries(anims.map(c => [c.name, c]));
-      const idleClip = clips.p01 || clips.o01 || anims[0];
-      const walkClip = clips.l01 || idleClip;
-
-      // Feet: measure the idle pose once, so instances stand on the ground rather than sink into it.
-      const probe = skeletonClone(template);
-      if (idleClip) { const m = new THREE.AnimationMixer(probe); m.clipAction(idleClip).play(); m.setTime(0); }
-      probe.updateMatrixWorld(true);
-      const box = new THREE.Box3().setFromObject(probe, true);
-      const footY = isFinite(box.min.y) ? box.min.y : 0;
-
-      for (const i of t.spawns) {
+      if (!tpl) { this.stats.skipped += w.spawns.length; continue; }
+      for (const i of w.spawns) {
         const s = data.spawns[i];
-        const inst = skeletonClone(template);
-        const a = [], b = [];
-        template.traverse(o => a.push(o)); inst.traverse(o => b.push(o));
-        a.forEach((o, j) => { if (o.isMesh) { b[j].userData = { classic: o.userData.classic, sun: o.userData.sun, src: o.userData.src }; b[j].material = o.material; b[j].visible = o.visible; } });
-        const normal = raceSize[s.race] || s.size || 1;
-        const k = 0.1 * (s.size > 0 ? s.size / normal : 1);
-        const holder = new THREE.Group();
-        holder.add(inst);
-        inst.scale.setScalar(k);
-        inst.position.y = -footY * k;
-        const mixer = idleClip ? new THREE.AnimationMixer(inst) : null;
-        const idle = mixer && mixer.clipAction(idleClip);
-        const walk = mixer && walkClip !== idleClip ? mixer.clipAction(walkClip) : null;
-        idle?.play(); walk?.play();
-        const npc = { s, holder, mixer, idle, walk, phase: hash01(i) * 10, path: null,
-                      meshes: b.filter(o => o.isMesh) };
+        const a = F.instance(tpl, s, ['p01', 'l01']);
+        a.idle = a.actions.get('p01') || null;
+        a.walk = a.actions.get('l01') || null;
+        if (a.idle) a.idle.setEffectiveWeight(1);
+        const npc = { s, ...a, phase: hash01(i) * 10, path: null };
         const g = s.grid && data.grids[s.grid];
         if (g && g.wp.length > 1) npc.path = this._timeline(g, s, groundAt, i);
         const ground = groundAt(s.p);
-        holder.position.set(s.p[0], ground ?? s.p[1], s.p[2]);
-        holder.rotation.y = faceYaw(headingBeta(s.h));
-        this.group.add(holder);
+        a.holder.position.set(s.p[0], ground ?? s.p[1], s.p[2]);
+        a.holder.rotation.y = faceYaw(headingBeta(s.h));
+        this.group.add(a.holder);
         this.list.push(npc);
         this.stats.placed++;
       }
     }
+    this.stats.borrowed = F.borrowed;
     return this;
   }
 
@@ -232,7 +133,7 @@ export class NPCs {
           n.holder.rotation.y = seg.yaw;
         }
       }
-      if (n.mixer) {
+      if (n.mixer && n.idle) {
         n.idle.setEffectiveWeight(walking && n.walk ? 0 : 1);
         n.walk?.setEffectiveWeight(walking ? 1 : 0);
         n.mixer.setTime(t + n.phase);
@@ -247,3 +148,5 @@ export class NPCs {
     this.list = [];
   }
 }
+
+export { faceYaw };
